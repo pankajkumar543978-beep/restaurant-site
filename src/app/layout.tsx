@@ -40,7 +40,10 @@ export const metadata: Metadata = {
     title: "John's Breakfast & Lunch | Calgary Diner Since 2007",
     description:
       "Good Food. Great Mornings. Since 2007. Enjoy hearty homestyle breakfast favourites served with warmth in the heart of Calgary.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://johnsbreakfastyyc.com",
+    url:
+      process.env.NEXT_PROD_SITE_URL ||
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://johnsbreakfastyyc.com",
     siteName: "John's Breakfast & Lunch",
     locale: "en_CA",
     type: "website",

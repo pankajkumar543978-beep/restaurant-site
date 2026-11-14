@@ -63,7 +63,7 @@ cp .env.example .env.local
 
 | Variable | Description | Default Fallback |
 | :--- | :--- | :--- |
-| `NEXT_PUBLIC_SITE_URL` | Canonical website domain | `https://johnsbreakfastyyc.com` |
+| `NEXT_PROD_SITE_URL` | Canonical website domain (Vercel compatible) | `https://johnsbreakfastyyc.com` |
 | `NEXT_PUBLIC_GOOGLE_MAPS_URL` | Official Google Maps location shortlink | `https://maps.app.goo.gl/kCNiTCxWnfGUAxpF8` |
 | `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL` | Google Maps iframe embed URL | `https://maps.google.com/maps?q=...` |
 | `NEXT_PUBLIC_RESTAURANT_PHONE` | Direct phone link (`tel:`) | `+1 403-277-0255` |
