@@ -50,15 +50,27 @@ export function Footer() {
                 <InstagramIcon className="w-4 h-4 text-espresso-950 group-hover:text-white transition-colors" />
               </a>
 
-              <a
-                href={RESTAURANT_DATA.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white hover:bg-diner-red text-espresso-950 hover:text-white flex items-center justify-center transition-all shadow-sm group"
-                aria-label="John's Breakfast & Lunch Facebook"
-              >
-                <FacebookIcon className="w-4 h-4 text-espresso-950 group-hover:text-white transition-colors" />
-              </a>
+              {RESTAURANT_DATA.social.isFacebookActive ? (
+                <a
+                  href={RESTAURANT_DATA.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white hover:bg-diner-red text-espresso-950 hover:text-white flex items-center justify-center transition-all shadow-sm group"
+                  aria-label="John's Breakfast & Lunch Facebook"
+                >
+                  <FacebookIcon className="w-4 h-4 text-espresso-950 group-hover:text-white transition-colors" />
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  className="w-9 h-9 rounded-full bg-white/70 text-espresso-950/40 flex items-center justify-center cursor-not-allowed border border-white/20 shadow-xs select-none"
+                  aria-label="Facebook page currently unavailable"
+                  title="Facebook page currently unavailable (Page inactive or closed)"
+                >
+                  <FacebookIcon className="w-4 h-4 text-espresso-950/40" />
+                </button>
+              )}
             </div>
           </div>
 

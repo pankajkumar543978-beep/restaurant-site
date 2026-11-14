@@ -39,7 +39,9 @@ export const REVIEWS_META: ReviewsMeta = {
   ratingDisplay: "4.6★ on Google (800+ reviews)",
   totalReviewsCount: "800+ verified community reviews",
   directGoogleReviewUrl:
-    process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || "https://maps.app.goo.gl/kCNiTCxWnfGUAxpF8",
+    process.env.NEXT_PROD_GOOGLE_MAPS_URL ||
+    process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL ||
+    "https://maps.app.goo.gl/kCNiTCxWnfGUAxpF8",
   summaryHeadline: "Calgary's Hearty Diner Tradition, Celebrated by Neighbours",
   trustBadges: [
     {

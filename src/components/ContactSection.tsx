@@ -148,15 +148,28 @@ export function ContactSection() {
                   <span>@johnsbreakfastyyc</span>
                 </a>
 
-                <a
-                  href={RESTAURANT_DATA.social.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full bg-white border border-cream-300 hover:border-diner-red text-xs font-bold text-espresso-800 hover:text-diner-red transition-all shadow-2xs"
-                >
-                  <FacebookIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-diner-red" />
-                  <span>Facebook</span>
-                </a>
+                {RESTAURANT_DATA.social.isFacebookActive ? (
+                  <a
+                    href={RESTAURANT_DATA.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full bg-white border border-cream-300 hover:border-diner-red text-xs font-bold text-espresso-800 hover:text-diner-red transition-all shadow-2xs"
+                  >
+                    <FacebookIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-diner-red" />
+                    <span>Facebook</span>
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    disabled
+                    className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-full bg-cream-100 border border-cream-300/60 text-xs font-semibold text-espresso-400 cursor-not-allowed shadow-none select-none"
+                    aria-label="Facebook page currently unavailable"
+                    title="Facebook page currently unavailable (Page inactive or closed)"
+                  >
+                    <FacebookIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-espresso-400" />
+                    <span>Facebook (Unavailable)</span>
+                  </button>
+                )}
               </div>
             </div>
 

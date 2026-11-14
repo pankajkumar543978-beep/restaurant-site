@@ -182,6 +182,7 @@ export function LocationHours() {
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
                   src={
+                    process.env.NEXT_PROD_GOOGLE_MAPS_EMBED_URL ||
                     process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL ||
                     "https://maps.google.com/maps?q=John's+Breakfast+%26+Lunch+2614+4+St+NW+A+Calgary+AB&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   }

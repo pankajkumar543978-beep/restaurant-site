@@ -39,6 +39,7 @@ export interface RestaurantData {
   social: {
     instagram: string;
     facebook: string;
+    isFacebookActive: boolean;
     googleMaps: string;
   };
   hours: {
@@ -79,14 +80,15 @@ export const RESTAURANT_DATA: RestaurantData = {
     neighborhood: "Mount Pleasant / Capitol Hill",
   },
   contact: {
-    phone: process.env.NEXT_PUBLIC_RESTAURANT_PHONE || "+1 403-277-0255",
-    formattedPhone: process.env.NEXT_PUBLIC_RESTAURANT_FORMATTED_PHONE || "(403) 277-0255",
-    email: process.env.NEXT_PUBLIC_RESTAURANT_EMAIL || "johnsbreakfastyyc@gmail.com",
+    phone: process.env.NEXT_PROD_RESTAURANT_PHONE || process.env.NEXT_PUBLIC_RESTAURANT_PHONE || "+1 403-277-0255",
+    formattedPhone: process.env.NEXT_PROD_RESTAURANT_FORMATTED_PHONE || process.env.NEXT_PUBLIC_RESTAURANT_FORMATTED_PHONE || "(403) 277-0255",
+    email: process.env.NEXT_PROD_RESTAURANT_EMAIL || process.env.NEXT_PUBLIC_RESTAURANT_EMAIL || "johnsbreakfastyyc@gmail.com",
   },
   social: {
-    instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/johnsbreakfastyyc/",
-    facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/johnsbreakfastyyc/",
-    googleMaps: process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || "https://maps.app.goo.gl/kCNiTCxWnfGUAxpF8",
+    instagram: process.env.NEXT_PROD_INSTAGRAM_URL || process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/johnsbreakfastyyc/",
+    facebook: process.env.NEXT_PROD_FACEBOOK_URL || process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/johnsbreakfastyyc/",
+    isFacebookActive: (process.env.NEXT_PROD_FACEBOOK_ACTIVE || process.env.NEXT_PUBLIC_FACEBOOK_ACTIVE) === "true",
+    googleMaps: process.env.NEXT_PROD_GOOGLE_MAPS_URL || process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || "https://maps.app.goo.gl/kCNiTCxWnfGUAxpF8",
   },
   hours: {
     summary: "Tuesday – Saturday: 8:00 AM – 3:30 PM | Sunday & Monday: Closed",
