@@ -36,6 +36,15 @@ export const metadata: Metadata = {
     "John and Wendy Ly"
   ],
   authors: [{ name: "John's Breakfast & Lunch" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/images/johns-logo.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "John's Breakfast & Lunch | Calgary Diner Since 2007",
     description:

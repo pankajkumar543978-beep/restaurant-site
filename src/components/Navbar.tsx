@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { RESTAURANT_DATA } from "@/data/restaurant";
 import { useFavorites } from "@/utils/favorites";
 import {
@@ -134,18 +135,29 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-6">
-            {/* Typographic Restaurant Logo / Wordmark */}
+            {/* Typographic Restaurant Logo / Wordmark with Official Badge */}
             <Link
               href="/"
-              className="group flex flex-col text-left focus:outline-none focus:ring-2 focus:ring-diner-red rounded px-1 -mx-1"
+              className="group flex items-center gap-2.5 sm:gap-3 text-left focus:outline-none focus:ring-2 focus:ring-diner-red rounded px-1 -mx-1"
               aria-label="John's Breakfast & Lunch Home"
             >
-              <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-espresso-950 group-hover:text-diner-red transition-colors leading-none">
-                JOHN&apos;S
-              </span>
-              <span className="text-[10px] sm:text-[10.5px] font-sans font-semibold tracking-[0.22em] uppercase text-espresso-600 mt-1 leading-none">
-                Breakfast &amp; Lunch · Calgary
-              </span>
+              <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden shrink-0 shadow-xs border border-espresso-950/15 group-hover:scale-105 transition-transform bg-espresso-950">
+                <Image
+                  src="/images/johns-logo.png"
+                  alt="John's Breakfast & Lunch Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-espresso-950 group-hover:text-diner-red transition-colors leading-none">
+                  JOHN&apos;S
+                </span>
+                <span className="text-[10px] sm:text-[10.5px] font-sans font-semibold tracking-[0.22em] uppercase text-espresso-600 mt-1 leading-none">
+                  Breakfast &amp; Lunch · Calgary
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation Links */}
@@ -264,13 +276,23 @@ export function Navbar() {
               <div>
                 {/* Drawer Header */}
                 <div className="pb-4 mb-4 border-b border-cream-300/80 flex items-center justify-between">
-                  <div>
-                    <h3 className="font-serif text-2xl font-bold text-espresso-950 leading-none">
-                      JOHN&apos;S
-                    </h3>
-                    <p className="text-[10px] uppercase tracking-wider text-diner-red mt-1 font-bold">
-                      Breakfast &amp; Lunch · Est. 2007
-                    </p>
+                  <div className="flex items-center gap-2.5">
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 shadow-xs border border-espresso-950/15 bg-espresso-950">
+                      <Image
+                        src="/images/johns-logo.png"
+                        alt="John's Breakfast & Lunch Logo"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-2xl font-bold text-espresso-950 leading-none">
+                        JOHN&apos;S
+                      </h3>
+                      <p className="text-[10px] uppercase tracking-wider text-diner-red mt-1 font-bold">
+                        Breakfast &amp; Lunch · Est. 2007
+                      </p>
+                    </div>
                   </div>
 
                   <motion.button

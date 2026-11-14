@@ -2,8 +2,9 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { RESTAURANT_DATA } from "@/data/restaurant";
-import { Coffee, MapPin, Phone, Mail, ArrowUp } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowUp } from "lucide-react";
 import { InstagramIcon, FacebookIcon } from "@/components/Icons";
 
 export function Footer() {
@@ -21,8 +22,13 @@ export function Footer() {
           {/* Brand Info (4 cols) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-diner-red flex items-center justify-center text-cream-50 shadow-sm">
-                <Coffee className="w-5 h-5 text-diner-honey" />
+              <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 shadow-md border border-espresso-700 bg-espresso-950">
+                <Image
+                  src="/images/johns-logo.png"
+                  alt="John's Breakfast & Lunch Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <div>
                 <span className="block font-serif text-2xl font-bold tracking-tight text-cream-50 leading-none">
