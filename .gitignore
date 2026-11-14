@@ -1,0 +1,47 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing and Playwright QA artifacts
+/.playwright-mcp
+/test-results
+/playwright-report
+
+# Next.js build output
+/.next/
+/out/
+tsconfig.tsbuildinfo
+
+# Production
+/build
+/dist
+
+# Environment variables (NEVER commit secrets or live tokens)
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Internal documentation and prompt instructions
+prompt*.md
+PLAN.md
+01_PROJECT_RESEARCH_AND_DESIGN.md
+COMPETITOR_RESEARCH.md
+DESIGN.md
+IMAGE_SOURCES.md
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS / Editor metadata
+.DS_Store
+*.pem
+Thumbs.db
+.vscode/
+.idea/
