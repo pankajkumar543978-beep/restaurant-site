@@ -25,13 +25,9 @@ tsconfig.tsbuildinfo
 .env.test.local
 .env.production.local
 
-# Internal documentation and prompt instructions
+# Internal prompt instructions (kept private)
 prompt*.md
-PLAN.md
-01_PROJECT_RESEARCH_AND_DESIGN.md
-COMPETITOR_RESEARCH.md
-DESIGN.md
-IMAGE_SOURCES.md
+docs/prompt*.md
 
 # Logs
 npm-debug.log*

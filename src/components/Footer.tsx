@@ -44,20 +44,20 @@ export function Footer() {
                 href={RESTAURANT_DATA.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-espresso-900 hover:bg-diner-red text-cream-200 hover:text-white flex items-center justify-center transition-colors border border-espresso-800"
+                className="w-9 h-9 rounded-full bg-white hover:bg-diner-red text-espresso-950 hover:text-white flex items-center justify-center transition-all shadow-sm group"
                 aria-label="John's Breakfast & Lunch Instagram"
               >
-                <InstagramIcon className="w-4 h-4" />
+                <InstagramIcon className="w-4 h-4 text-espresso-950 group-hover:text-white transition-colors" />
               </a>
 
               <a
                 href={RESTAURANT_DATA.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-espresso-900 hover:bg-diner-red text-cream-200 hover:text-white flex items-center justify-center transition-colors border border-espresso-800"
+                className="w-9 h-9 rounded-full bg-white hover:bg-diner-red text-espresso-950 hover:text-white flex items-center justify-center transition-all shadow-sm group"
                 aria-label="John's Breakfast & Lunch Facebook"
               >
-                <FacebookIcon className="w-4 h-4" />
+                <FacebookIcon className="w-4 h-4 text-espresso-950 group-hover:text-white transition-colors" />
               </a>
             </div>
           </div>
